@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <!-- <header>
+        <h1>Job Portal</h1>
+        <h1> <%= check.Name %></h1>
+    </header> -->
+    <div  style="background-color:#8badcb"  >
+         
+     
+        <h2 style="font-size: 45px;"  >
+        
+        
+        
+       Job Portal </h2>
+        
+        <h2 style="font-size: 35px;" >Jobseekers page</h2>
+        <h2 style="font-size: 30px;">Hello ! <%= check.Name %></h2>
+        <div style="background-color:#b56666" ><h2>click to Enter Details to Apply for a job--> <span><button class="button" style="padding:9px 28px"><a href="Jobseeker.html">Apply</a></button></span></h4 ></div>
+        
+      </div>
+
+    <section class="jobs">
+        <center><header><h1>Job Available in Market </h1></header></center>
+        <%  Job.forEach( item=>
+        { %> <div class="job">
+            <h3 style=" font-weight: bold;"> Job : <span  style=" font-weight: normal;"><%= item.Job_Name%></span></h3>
+            <p style=" font-weight: bold;">Company: <span  style=" font-weight: normal;"><%= item.Company %></span></p>
+            <p style=" font-weight: bold;">Eligibility : <span  style=" font-weight: normal;"><%= item.Eligibility %></span></p>
+            <p style=" font-weight: bold;">Deadline : <span  style=" font-weight: normal;"><%= item.Deadline %></span></p>
+            <p style=" font-weight: bold;">Location :<span style=" font-weight: normal;"><%= item.Location %> </span></p>
+            <button class="favorite styled" type="button"><a href="Apply.html">Apply</a></button> 
+        </div>
+          <%
+        }
+        )  
+        %>
+       
+    </section>
+    <section class="employers">
+        <center><header><h1>Job you are finding </h1></header></center>
+        <%  data.forEach( item=>
+        { %> <div class="job">
+            <h3 style=" font-weight: bold;"> Job : <span  style=" font-weight: normal;"><%= item.Job_Name%></span></h3>
+            <p style=" font-weight: bold;">Company: <span  style=" font-weight: normal;"><%= item.Company %></span></p>
+           
+            <p style=" font-weight: bold;">Qualification :<span style=" font-weight: normal;"><%= item.Qualification %></span>  <span> <p  style=" font-weight: bold;">Age :<span style=" font-weight: normal;"><%= item.Age %> </span> </span></p>
+            <p style=" font-weight: bold;">Location :<span style=" font-weight: normal;"><%= item.Location %> </span></p>
+           
+            <button class="favorite styled" type="button"><a href="Responce.html">Responce</a></button>
+            
+            <button class="favorite styled" type="button"><a href="Rupdate.html">update</a></button>
+            <button class="favorite styled" type="button"><a href="Rdelete.html">delete</a></button>
+        </div>
+          <%
+        }
+        )  
+        %> 
+        
+    </section>
+    
+    
+        
+
+
+</body>
+</html>

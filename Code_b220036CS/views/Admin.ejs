@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div  style="background-color:#8badcb"  >
+         
+     
+        <h2 style="font-size: 45px;"  >
+        
+        
+        
+       Job Portal </h2>
+        
+        <h2 style="font-size: 35px;" >Admin page</h2>
+        <h2 style="font-size: 30px;">Hello ! <%= check.Name %></h2>
+        
+        
+      </div>
+    <section class="jobs">
+        <center><header><h1>Job Available in Market </h1></header></center>
+        <%  Job.forEach( item=>
+        { %> <div class="job">
+            <h3>(<%= item.Serial_Number%>) Job : <%= item.Job_Name%></h3>
+            <p>Company: <%= item.Company %></p>
+            <p>email: <%= item.email %></p>
+            <p>Number: <%= item.Number %></p>
+            <button class="favorite styled" type="button"><a href="Adelete.html">delete</a></button> 
+        </div>
+          <%
+        }
+        )  
+        %>
+       
+    </section>
+    <section class="employers">
+        <center><header><h1>Aspirants Applied for jobs</h1></header></center>
+        <%  data.forEach( item=>
+        { %> <div class="job">
+            <h3> Job :<%= item.Job_Name%></h3>
+            <p>Company: <%= item.Company %></p>
+            <p>email: <%= item.email %></p>
+            <p>Number: <%= item.Number %></p>
+            
+            
+            <button class="favorite styled" type="button"><a href="Adelete.html">delete</a></button>
+        </div>
+          <%
+        }
+        )  
+        %> 
+        
+    </section>
+    
+        
+
+
+</body>
+</html>

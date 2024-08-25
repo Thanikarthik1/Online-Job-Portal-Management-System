@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <header><h1>Recieved responces from these Company</h1></header>
+    </header>
+    <section class="jobs">
+        
+        <%  Ar.forEach( item=>
+        { %> <div class="job">
+            <h3>(<%= item.user_Id%>) Recuter_Name: <%= item.Name%></h3>
+               <p>  Number :<%= item.Number %></p>
+               <p>  email : <%= item.email %></p>
+           
+            
+        </div>
+          <%
+        }
+        )  
+       
+        %>
+        
+   
+    
+        
+
+
+</body>
+</html>
